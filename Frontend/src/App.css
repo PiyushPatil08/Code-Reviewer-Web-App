@@ -1,0 +1,106 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fira Code', monospace;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  background-color: #121212;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  background-color: #1e1e1e;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-bottom: 2px solid #2a2a2a;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Main Layout */
+main {
+  width: 98%;
+  max-width: 1800px;
+  height: 90vh;
+  display: flex;
+  gap: 2rem;
+  border-radius: 0.7rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  background: #1a1a1a;
+  padding: 2rem;
+}
+
+/* Left Panel (Editor) */
+main .left {
+  flex: 1.2;
+  background-color: #1e1e1e;
+  padding: 2rem;
+  border: 1px solid #2a2a2a;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 0.7rem;
+}
+
+.code-container {
+  flex-grow: 1;
+  height: 100%;
+  overflow-y: auto;
+  border-radius: 0.7rem;
+  background-color: #0c0c0c;
+  padding: 2rem;
+  border: 1px solid #333;
+}
+
+/* Review Button */
+.review {
+  background-color: #0078ff;
+  color: #ffffff;
+  padding: 1rem 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 120, 255, 0.3);
+  text-align: center;
+  margin-top: 1rem;
+  align-self: flex-end;
+  font-size: 1rem;
+}
+
+.review:hover {
+  background-color: #005fcc;
+  box-shadow: 0 6px 12px rgba(0, 120, 255, 0.5);
+}
+
+/* Right Panel (Review Output) */
+main .right {
+  flex: 1;
+  background-color: #222222;
+  padding: 2.5rem;
+  font-size: 1.4rem;
+  overflow: auto;
+  border: 1px solid #2a2a2a;
+  line-height: 1.7;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 0.5rem;
+}
